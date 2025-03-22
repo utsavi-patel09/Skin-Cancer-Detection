@@ -1,0 +1,434 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Diagnosis</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: grey;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .hero {
+            background: url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+            height: 600px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 24px;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .content h2 {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .content .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            height:30%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            flex: 1 1 calc(33% - 40px);
+            padding: 20px;
+            text-align: center;
+        }
+        .card img {
+            height:300px;
+            width:490px;
+            border-radius: 8px 8px 0 0;
+        }
+        .card h3 {
+            font-size: 24px;
+            margin: 15px 0;
+        }
+        .card p {
+            font-size: 16px;
+            color: #555;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            .hero{
+              height:fit-content;
+            }
+            .content .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card {
+                flex: 1 1 100%;
+                max-width: 90%;
+            }
+           
+            
+        }
+        /* General Footer Styling */
+footer {
+    background-color:#4c4c4c;
+    color: white;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Footer Columns */
+.footer-column {
+    width: 23%;
+}
+
+.footer-column h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-bottom: 2px solid #FFFFFF;
+    padding-bottom: 10px;
+}
+
+.footer-column p {
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-column ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #18BC9C;
+}
+
+/* Social Icons */
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    background-color:#333;
+    color: #B2B2B2;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+.cancer-types {
+    display: flex;
+    justify-content: center;
+    margin-top:40px;
+    margin-bottom:40px;
+}
+
+.type {
+    text-align: center;
+}
+
+.img1 {
+    max-width: 50%;
+    border-radius: 10px;
+}
+
+.img2 {
+    max-width: 60%;
+    border-radius: 10px;
+}
+.tyz{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+
+.section {
+    padding: 30px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 65px;
+}
+
+.sectionone {
+    padding: 50px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 60px;
+}
+
+.btn-go-back {
+    background-color:grey; 
+    color: white; 
+    font-size: 1.2rem; 
+    font-weight: bold;
+    border: none; 
+    border-radius: 10px; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+    margin-top: 20px; 
+    margin-left:50%;
+}
+
+
+/* Form Styling */
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Label Styling */
+.form-group label {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+    margin-top:20px;
+}
+
+/* File Input Styling */
+.form-control-file {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Error Message Styling */
+.error-message {
+    display: none; /* Initially hidden */
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Submit Button Styling */
+input[type="submit"] {
+    background-color:grey;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   
+}
+
+
+    </style>
+</head>
+<body>
+    <header style="margin-bottom:10px">
+        <h1>Skin Cancer Detection</h1>
+    </header>
+
+    
+    <!-- Your website content goes here -->
+    {% if not predicted_result %}
+    <section  class="content">
+        <h2>Overview of Skin Cancer Types</h2>
+        <div class="cancer-types">
+            <div class="type">
+                <img class="img1" src="{{image1}}" alt="Malignant">
+                <h3>Malignant</h3>
+                <p class="txt">Malignant skin cancer occurs when cells become cancerous and can spread to other parts of the body. It includes serious types like melanoma.</p>
+                
+            </div>
+            <div class="type">
+                <img class="img2" src="{{image2}}" alt="Benign">
+                <h3 >Benign</h3>
+                <p class="txt">Benign skin growths are non-cancerous and do not spread. However, some may require removal if they cause discomfort.</p>
+                
+            </div>
+        </div>
+    </section>
+    
+    <div class="tyz">
+    <section id="precautions" class="section">
+        <h2>Basic Skin Care Precautions</h2>
+        <ul>
+            <li>Use sunscreen daily with SPF 30 or higher.</li>
+            <li>Wear protective clothing, hats, and sunglasses when outdoors.</li>
+            <li>Avoid tanning beds and excessive sun exposure.</li>
+            <li>Examine your skin regularly for new or changing growths or spots.</li>
+            <li>Consult a dermatologist annually for skin checks.</li>
+        </ul>
+    </section>
+
+
+    <section id="diagnosis" class="sectionone prediction-results">
+        <h2 style="text-align: center; font-size: 24px; font-weight: bold;">Live Diagnosis Tool</h2>
+        <br><br>
+
+        <form id="upload-form" method="POST" action="" enctype="multipart/form-data">
+            {% csrf_token %}  
+            <div class="form-group">
+                
+                <input type="file" class="form-control-file" id="fileInput" name="file" accept="image/*" onchange="previewImage()">
+                <p id="errorText" class="error-message" style="color: red;">Please upload a file before submitting.</p>
+
+            </div>
+            <br>
+            <div class="form-group text-center">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </section>
+</div>
+
+   
+    
+    <br>
+
+    {% endif %}
+    
+    {% if predicted_result %}
+
+    <div class="tyz">
+
+
+        <section id="diagnosis" class="section prediction-results">
+            {% if user_image %}
+                <img src="{{ user_image }}" alt="Uploaded Image" style="max-width: 300px;">
+            {% endif %}
+
+           
+        </section>
+
+        <section id="precautions" class="section">
+
+            <div class="prediction-box">
+                <h2 for="result">Detection Result: {{predicted_result}}</h2>
+            </div>
+
+            <div class="precaution-box" style="padding-top:20px;">
+                <label style="padding:20px;font-size:30px"for="precaution">Precautions:</label>
+                <p style="padding:20px ">{{description}}</p>
+            </div>
+        </section>
+`      
+       
+    
+    
+    </div>
+    <button onclick="window.location.href='/'" class="btn-go-back">Go Back</button>
+    
+    {% endif %}
+    
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>About Us</h4>
+                <p>We provide an innovative system for accurate medical diagnoses using cutting-edge AI technology and medical expertise.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>Email: support@medicaldiagnosis.com</li>
+                    <li>Phone: +123-456-7890</li>
+                    
+                </ul>
+            </div>
+            
+        </div>
+        
+    </footer>
+    <script>
+        function previewImage() {
+            var fileInput = document.getElementById('fileInput');
+            var errorText = document.getElementById('errorText');
+            
+            if (fileInput.files.length > 0) {
+                errorText.style.display = 'none';
+            }
+        }
+    
+        document.addEventListener("DOMContentLoaded", function() {
+            var errorText = document.getElementById('errorText');
+            errorText.style.display = 'none'; // Hide error message on load
+        });
+    
+        document.getElementById('upload-form').addEventListener('submit', function(event) {
+            var fileInput = document.getElementById('fileInput');
+            var errorText = document.getElementById('errorText');
+    
+            if (!fileInput.files.length) {
+                errorText.style.display = 'block';
+                event.preventDefault();
+            }
+        });
+    </script>
+    
+    
+</body>
+</html>
