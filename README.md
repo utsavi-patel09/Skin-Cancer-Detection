@@ -40,6 +40,5 @@ ResNet-50
 - **Backend**: Python, Django
 - **ML Libraries**: TensorFlow, Keras, NumPy, OpenCV
 - **Visualization**: Matplotlib
-- **Deployment**: Localhost (can be extended to cloud)
 
 
